@@ -37,9 +37,7 @@ import com.example.android.architecture.blueprints.todoapp.util.EspressoIdlingRe
 public class TasksActivity extends AppCompatActivity {
 
     private static final String CURRENT_FILTERING_KEY = "CURRENT_FILTERING_KEY";
-
     private DrawerLayout mDrawerLayout;
-
     private TasksPresenter mTasksPresenter;
 
     @Override
@@ -88,7 +86,6 @@ public class TasksActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putSerializable(CURRENT_FILTERING_KEY, mTasksPresenter.getFiltering());
-
         super.onSaveInstanceState(outState);
     }
 
